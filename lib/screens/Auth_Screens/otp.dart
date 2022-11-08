@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:spot_light/screens/Auth_Screens/register.dart';
 import 'package:spot_light/utils/contraint.dart';
-import 'package:spot_light/utils/widgets.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:velocity_x/velocity_x.dart';
 
-class Login_Screen extends StatelessWidget {
-  const Login_Screen({super.key});
+class OtpScreen extends StatelessWidget {
+  const OtpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,7 @@ class Login_Screen extends StatelessWidget {
                     top: 80.sp,
                   ),
                   child: Text(
-                    "Sign In",
+                    "Verification",
                     style: TextStyle(
                         color: Vx.white,
                         fontSize: 31,
@@ -43,33 +41,33 @@ class Login_Screen extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                49.sp.heightBox,
-                mytextfield(text: "Email"),
-                23.sp.heightBox,
-                TextFormField(
-                  decoration: const InputDecoration(
-                      hintStyle: TextStyle(
-                        color: Vx.white,
-                      ),
-                      fillColor: Color.fromARGB(146, 255, 255, 255),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey, width: 2.0),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey, width: 2.0),
-                      ),
-                      hintText: 'Password',
-                      // : Icon(Icons.mail_outline),
-                      prefixIcon: Icon(
-                        Icons.key,
-                        color: Vx.white,
-                      ),
-                      suffixIcon: Icon(
-                        Icons.remove_red_eye,
-                        color: Vx.white,
-                      )),
-                ),
-                15.sp.heightBox,
+                // 49.sp.heightBox,
+                // mytextfield(text: "Email"),
+                // 23.sp.heightBox,
+                // TextFormField(
+                //   decoration: const InputDecoration(
+                //       hintStyle: TextStyle(
+                //         color: Vx.white,
+                //       ),
+                //       fillColor: Color.fromARGB(146, 255, 255, 255),
+                //       enabledBorder: OutlineInputBorder(
+                //         borderSide: BorderSide(color: Colors.grey, width: 2.0),
+                //       ),
+                //       focusedBorder: OutlineInputBorder(
+                //         borderSide: BorderSide(color: Colors.grey, width: 2.0),
+                //       ),
+                //       hintText: 'Password',
+                //       // : Icon(Icons.mail_outline),
+                //       prefixIcon: Icon(
+                //         Icons.key,
+                //         color: Vx.white,
+                //       ),
+                //       suffixIcon: Icon(
+                //         Icons.remove_red_eye,
+                //         color: Vx.white,
+                //       )),
+                // ),
+                // 15.sp.heightBox,
                 TextButton(
                     onPressed: () {},
                     child: Align(
@@ -99,18 +97,24 @@ class Login_Screen extends StatelessWidget {
                         .make()
                         .paddingOnly(top: 17.sp, bottom: 17.sp)),
                 25.sp.heightBox,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Wrap(
+                  direction: Axis.horizontal,
+                  // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    "Dont have an account?"
+                    "We have send you an email at"
                         .text
                         .color(Color.fromARGB(255, 90, 91, 94))
                         .make(),
                     TextButton(
                         onPressed: () {
-                          Get.to(() => Register());
+                          // Get.to(() => Register());
                         },
-                        child: "Sign Up".text.color(kprimcolor).make())
+                        child:
+                            "john****@gmail.com".text.color(kprimcolor).make()),
+                    "to reset your password"
+                        .text
+                        .color(Color.fromARGB(255, 90, 91, 94))
+                        .make(),
                   ],
                 )
               ],
