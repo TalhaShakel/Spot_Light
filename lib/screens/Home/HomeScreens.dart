@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spot_light/Controllers/mainController.dart';
+import 'package:spot_light/screens/Home/Explore.dart';
 import 'package:spot_light/utils/contraint.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -21,7 +24,8 @@ class MainhomeScreen extends StatelessWidget {
     Container(
       child:
           Center(child: "Settings".text.bold.color(Vx.white).size(52).make()),
-    )
+    ),
+    ExploreScreen()
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,67 +41,48 @@ class MainhomeScreen extends StatelessWidget {
           items: [
             BottomNavigationBarItem(
               icon: GestureDetector(
-                onTap: () {
-                  controller.increasefunc(0);
-                },
-                child: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: const Icon(
-                    Icons.home,
-                    size: 20.0,
-                  ),
-                ),
-              ),
-              label: 'Home',
-              backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
+                  onTap: () {
+                    controller.increasefunc(0);
+                  },
+                  child: Image.asset("assets/placeholder.png")),
+              label: "",
+              backgroundColor: Vx.black,
             ),
             BottomNavigationBarItem(
               icon: GestureDetector(
-                onTap: () {
-                  controller.increasefunc(1);
-                },
-                child: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
-                    Icons.search,
-                    size: 20.0,
-                  ),
-                ),
-              ),
-              label: 'Explore',
-              backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
+                  onTap: () {
+                    controller.increasefunc(1);
+                  },
+                  child: Image.asset("assets/Mask group-1.png")),
+              label: "",
+              backgroundColor: Vx.black,
             ),
             BottomNavigationBarItem(
               icon: GestureDetector(
-                onTap: () {
-                  controller.increasefunc(2);
-                },
-                child: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
-                    Icons.location_history,
-                    size: 20.0,
-                  ),
-                ),
-              ),
-              label: 'Places',
-              backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
+                  onTap: () {
+                    controller.increasefunc(2);
+                  },
+                  child: Image.asset("assets/Group 514035.png")),
+              label: "",
+              backgroundColor: Vx.black,
             ),
             BottomNavigationBarItem(
               icon: GestureDetector(
-                onTap: () {
-                  controller.increasefunc(3);
-                },
-                child: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
-                    Icons.settings,
-                    size: 20.0,
-                  ),
-                ),
-              ),
-              label: 'Settings',
-              backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
+                  onTap: () {
+                    controller.increasefunc(3);
+                  },
+                  child: Image.asset("assets/comment 1.png")),
+              label: "",
+              backgroundColor: Vx.black,
+            ),
+            BottomNavigationBarItem(
+              icon: GestureDetector(
+                  onTap: () {
+                    controller.increasefunc(4);
+                  },
+                  child: Image.asset("assets/Mask group.png")),
+              label: "",
+              backgroundColor: Vx.black,
             ),
           ],
         );
