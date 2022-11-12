@@ -32,6 +32,7 @@ class MainhomeScreen extends StatelessWidget {
       }),
       bottomNavigationBar: GetBuilder<MainController>(builder: (controller) {
         return BottomNavigationBar(
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           currentIndex: controller.count,
           items: [
             BottomNavigationBarItem(
@@ -41,7 +42,7 @@ class MainhomeScreen extends StatelessWidget {
                 },
                 child: Container(
                   margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
+                  child: const Icon(
                     Icons.home,
                     size: 20.0,
                   ),

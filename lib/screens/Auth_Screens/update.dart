@@ -87,13 +87,13 @@ class UpdatePasssword extends StatelessWidget {
                         color: Vx.white,
                       )),
                 ),
-                15.sp.heightBox,
-                TextButton(
-                    onPressed: () {},
-                    child: Align(
-                        alignment: Alignment.topRight,
-                        child:
-                            "Forgot Password".text.color(kprimcolor).make())),
+                // 15.sp.heightBox,
+                // TextButton(
+                //     onPressed: () {},
+                //     child: Align(
+                //         alignment: Alignment.topRight,
+                //         child:
+                //             "Forgot Password".text.color(kprimcolor).make())),
                 25.sp.heightBox,
                 Container(
                     width: Get.width,
