@@ -16,7 +16,7 @@ class Register extends StatelessWidget {
       backgroundColor: backgroundcolor,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(left: 60.sp, right: 60.sp),
+          padding: EdgeInsets.only(left: 10.sp, right: 10.sp),
           child: Center(
             child: Column(
               children: [
@@ -33,21 +33,15 @@ class Register extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
-                    top: 50.sp,
-                  ),
-                  child: const Text(
-                    "SPOT LIGHT",
-                    style: TextStyle(
-                        color: Vx.white,
-                        fontSize: 31,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
+                    padding: EdgeInsets.only(
+                      top: 50.sp,
+                    ),
+                    child: Image.asset("assets/Group 1363.png")),
                 49.sp.heightBox,
                 mytextfield(text: "Email"),
                 23.sp.heightBox,
                 TextFormField(
+                  style: TextStyle(color: Colors.white),
                   decoration: const InputDecoration(
                       hintStyle: TextStyle(
                         color: Vx.white,
@@ -85,12 +79,12 @@ class Register extends StatelessWidget {
                   child: Container(
                       width: Get.width,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.sp),
+                        borderRadius: BorderRadius.circular(11.sp),
                         gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
                           colors: <Color>[
-                            Color.fromRGBO(84, 104, 253, 1),
+                            Color.fromRGBO(85, 105, 255, 1),
                             Color.fromRGBO(0, 30, 255, 1)
                           ],
                         ),
