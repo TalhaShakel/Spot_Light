@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spot_light/Controllers/mainController.dart';
 import 'package:spot_light/screens/Home/Explore.dart';
+import 'package:spot_light/screens/Home/HomeSreen.dart';
 import 'package:spot_light/utils/contraint.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -12,19 +13,10 @@ class MainhomeScreen extends StatelessWidget {
   var controller = Get.put(MainController());
 
   List screenList = [
-    Container(
-      child: Center(child: "Home".text.bold.color(Vx.white).size(52).make()),
-    ),
-    Container(
-      child: Center(child: "Explore".text.bold.color(Vx.white).size(52).make()),
-    ),
-    Container(
-      child: Center(child: "Places".text.bold.color(Vx.white).size(52).make()),
-    ),
-    Container(
-      child:
-          Center(child: "Settings".text.bold.color(Vx.white).size(52).make()),
-    ),
+    HomeScreen(),
+    Center(child: "Explore".text.bold.color(Vx.white).size(52).make()),
+    Center(child: "Places".text.bold.color(Vx.white).size(52).make()),
+    Center(child: "Settings".text.bold.color(Vx.white).size(52).make()),
     ExploreScreen()
   ];
   @override
