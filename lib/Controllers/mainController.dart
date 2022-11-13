@@ -9,4 +9,11 @@ class MainController extends GetxController {
     print(count);
     refresh();
   }
+
+  // bool isSelected = false;
+  String selectedSport = '';
+  tabs(isSelected) {
+    selectedSport = isSelected;
+    refresh();
+  }
 }

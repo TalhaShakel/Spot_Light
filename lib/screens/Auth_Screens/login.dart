@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spot_light/screens/Auth_Screens/register.dart';
-import 'package:spot_light/screens/Home/HomeScreens.dart';
+import 'package:spot_light/screens/Home/MainHomeScreens.dart';
 import 'package:spot_light/utils/contraint.dart';
 import 'package:spot_light/utils/widgets.dart';
 import 'package:velocity_x/velocity_x.dart';
