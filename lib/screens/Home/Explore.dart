@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:spot_light/screens/Home/Live/live_streaming.dart';
 import 'package:spot_light/utils/contraint.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -57,53 +59,58 @@ class ExploreScreen extends StatelessWidget {
                       mainAxisSpacing: 12,
                       crossAxisSpacing: 12),
                   itemBuilder: (context, index) {
-                    return Container(
-                      height: 118.sp,
-                      width: 118.sp,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/2ec.png"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(3.sp),
-                        color: Vx.white,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            // Image.asset(""),
-                            // "Hendri".text.white.bold.make(),
-                            "Live"
-                                .text
-                                .white
-                                .make()
-                                .box
-                                .padding(EdgeInsets.all(3))
-                                .color(Color.fromRGBO(235, 87, 87, 1))
-                                .bottomRounded(value: 3.sp)
-                                .topRounded(value: 3.sp)
-                                .make()
-                                .objectTopLeft(),
-                            4.widthBox,
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.remove_red_eye,
-                                  color: Vx.white,
-                                  size: 15,
-                                ),
-                                "8.1k".text.white.make()
-                              ],
-                            )
-                                .box
-                                .padding(EdgeInsets.all(3))
-                                .color(Color.fromRGBO(0, 0, 0, 0.28))
-                                .bottomRounded(value: 3.sp)
-                                .topRounded(value: 3.sp)
-                                .make(),
-                          ],
+                    return GestureDetector(
+                      onTap: () {
+                        Get.to(()=>Live_Streaming());
+                      },
+                      child: Container(
+                        height: 118.sp,
+                        width: 118.sp,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/2ec.png"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.circular(3.sp),
+                          color: Vx.white,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              // Image.asset(""),
+                              // "Hendri".text.white.bold.make(),
+                              "Live"
+                                  .text
+                                  .white
+                                  .make()
+                                  .box
+                                  .padding(EdgeInsets.all(3))
+                                  .color(Color.fromRGBO(235, 87, 87, 1))
+                                  .bottomRounded(value: 3.sp)
+                                  .topRounded(value: 3.sp)
+                                  .make()
+                                  .objectTopLeft(),
+                              4.widthBox,
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.remove_red_eye,
+                                    color: Vx.white,
+                                    size: 15,
+                                  ),
+                                  "8.1k".text.white.make()
+                                ],
+                              )
+                                  .box
+                                  .padding(EdgeInsets.all(3))
+                                  .color(Color.fromRGBO(0, 0, 0, 0.28))
+                                  .bottomRounded(value: 3.sp)
+                                  .topRounded(value: 3.sp)
+                                  .make(),
+                            ],
+                          ),
                         ),
                       ),
                     );
