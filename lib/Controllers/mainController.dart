@@ -16,4 +16,10 @@ class MainController extends GetxController {
     selectedSport = isSelected;
     refresh();
   }
+
+  bool isAllMessage = true;
+  isAllMessegeF(isAllMessage1) {
+    isAllMessage = isAllMessage1;
+    refresh();
+  }
 }
