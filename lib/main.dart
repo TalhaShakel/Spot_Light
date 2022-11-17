@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:spot_light/screens/Auth_Screens/login.dart';
+import 'package:spot_light/screens/Home/Onboarding/Onboarding1.dart';
 import 'package:spot_light/screens/splash.dart';
 
 void main() {
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
               // is not restarted.
               primarySwatch: Colors.blue,
             ),
-            home: Login_Screen(),
+            home: SplashScreen(),
           );
         });
   }

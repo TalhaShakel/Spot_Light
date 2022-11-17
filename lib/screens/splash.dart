@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:spot_light/screens/Home/Onboarding/Onboarding1.dart';
 import 'package:spot_light/utils/contraint.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -7,6 +11,13 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 2)).then((value) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Onboarding1(),
+          ));
+    });
     return Scaffold(
       backgroundColor: backgroundcolor,
       body: Center(
