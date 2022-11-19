@@ -191,7 +191,7 @@ class bottomsheet_viewrs extends StatelessWidget {
             decoration: BoxDecoration(color: Vx.gray100),
           ),
           20.sp.heightBox,
-          "Viewers (548)".text.white.make(),
+          "Audience (548)".text.white.make(),
           20.sp.heightBox,
           GridView.builder(
               physics: ScrollPhysics(),
