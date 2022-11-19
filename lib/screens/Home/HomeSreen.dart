@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:spot_light/Controllers/mainController.dart';
+import 'package:spot_light/screens/Profile/Profile.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -23,7 +24,11 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           centerTitle: true,
-          leading: Image.asset("assets/img2.png"),
+          leading: GestureDetector(
+              onTap: () {
+                Get.to(() => ProfileScreen());
+              },
+              child: Image.asset("assets/img2.png")),
           title: "Home".text.make(),
           actions: [Icon(Icons.search)],
         ),

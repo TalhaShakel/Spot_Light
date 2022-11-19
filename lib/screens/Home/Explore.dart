@@ -61,7 +61,7 @@ class ExploreScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
-                        Get.to(()=>Live_Streaming());
+                        Get.to(() => Live_Streaming());
                       },
                       child: Container(
                         height: 118.sp,
