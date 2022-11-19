@@ -342,7 +342,7 @@ class ProfileScreen extends StatelessWidget {
             children: [
               Icon(
                 Icons.favorite_border_outlined,
-                color: Colors.blue,
+                color: Color.fromRGBO(84, 104, 253, 1),
                 size: 28,
               ),
               Text(
@@ -354,7 +354,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               Icon(
                 Icons.messenger_outline,
-                color: Colors.blue,
+                color: Color.fromRGBO(84, 104, 253, 1),
                 size: 26,
               ),
               Text(
@@ -366,7 +366,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               Icon(
                 Icons.send,
-                color: Colors.blue,
+                color: Color.fromRGBO(84, 104, 253, 1),
                 size: 26,
               ),
               Text(
