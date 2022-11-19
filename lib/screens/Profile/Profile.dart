@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:spot_light/screens/Profile/EditProfile.dart';
+import 'package:spot_light/screens/Profile/Followers/Follower.dart';
 import 'package:spot_light/utils/contraint.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -149,29 +150,34 @@ class ProfileScreen extends StatelessWidget {
                 SizedBox(
                   width: 20,
                 ),
-                Column(
-                  children: [
-                    Text(
-                      "20K",
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
+                GestureDetector(
+                  onTap: () {
+                    Get.to(() => FollowersScreen());
+                  },
+                  child: Column(
+                    children: [
+                      Text(
+                        "20K",
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Followers",
-                      style: TextStyle(
-                        letterSpacing: 0.4,
-                        color: Color.fromRGBO(197, 197, 197, 1),
-                        fontWeight: FontWeight.w100,
-                        fontSize: 13,
+                      SizedBox(
+                        height: 8,
                       ),
-                    )
-                  ],
+                      Text(
+                        "Followers",
+                        style: TextStyle(
+                          letterSpacing: 0.4,
+                          color: Color.fromRGBO(197, 197, 197, 1),
+                          fontWeight: FontWeight.w100,
+                          fontSize: 13,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
                 SizedBox(
                   width: 20,
