@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:spot_light/screens/Home/Onboarding/Onboarding1.dart';
 import 'package:spot_light/screens/Profile/Comments/Comments.dart';
 import 'package:spot_light/screens/Profile/EditProfile.dart';
+import 'package:spot_light/screens/Profile/Followers/Follower.dart';
 import 'package:spot_light/screens/Profile/Profile.dart';
 import 'package:spot_light/utils/contraint.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -18,7 +19,7 @@ class SplashScreen extends StatelessWidget {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const Onboarding1(),
+            builder: (context) => const FollowersScreen(),
           ));
     });
     return Scaffold(
