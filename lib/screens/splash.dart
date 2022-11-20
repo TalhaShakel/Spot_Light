@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spot_light/screens/Home/Onboarding/Onboarding1.dart';
@@ -19,7 +18,7 @@ class SplashScreen extends StatelessWidget {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const FollowersScreen(),
+            builder: (context) => FollowersScreen(),
           ));
     });
     return Scaffold(
