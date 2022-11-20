@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FollowersScreen(),
+            builder: (context) => Onboarding1(),
           ));
     });
     return Scaffold(

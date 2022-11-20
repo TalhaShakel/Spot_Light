@@ -3,77 +3,74 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:spot_light/Controllers/mainController.dart';
+import 'package:spot_light/utils/contraint.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class FollowersScreen extends StatefulWidget {
+class FollowersScreen extends StatelessWidget {
   FollowersScreen({super.key});
 
-  @override
-  State<FollowersScreen> createState() => _FollowersScreenState();
-}
-
-class _FollowersScreenState extends State<FollowersScreen> {
-  int index = 0;
-
+  // int index = 0;
   @override
   Widget build(BuildContext context) {
+    var controller = Get.find<MainController>();
+
     return Scaffold(
+      backgroundColor: backgroundcolor,
       appBar: AppBar(
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-        ],
-        title: Text("Micheal Lurk"),
+        backgroundColor: Color.fromRGBO(255, 255, 255, 0.1),
         centerTitle: true,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Get.back();
-          },
-        ),
+        leading: Image.asset("assets/img2.png"),
+        title: "Micheal Lurk".text.make(),
+        actions: [Icon(Icons.search)],
       ),
-      body: Container(
-        color: Colors.black,
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(children: [
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: GetBuilder<MainController>(builder: (controller) {
+          return Column(children: [
+            15.sp.heightBox,
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
-                      setState(() {
-                        index = 0;
-                      });
+                      controller.followers(0);
+                      // controller.index = 0;
+                      // controller.update();
+                      print(controller.index);
                     },
                     child: Text(
                       "101 Followers",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
                   ),
                   15.widthBox,
                   GestureDetector(
                     onTap: () {
-                      setState(() {
-                        index = 1;
-                      });
+                      controller.followers(1);
+
+                      // controller.index = 1;
+                      // controller.update();
+                      print(controller.index);
                     },
                     child: Text(
                       "24 Following",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
                   ),
                   15.widthBox,
                   GestureDetector(
                     onTap: () {
-                      setState(() {
-                        index = 2;
-                      });
+                      controller.followers(2);
+
+                      // controller.index = 2;
+                      // controller.update();
+                      print(controller.index);
                     },
                     child: Text(
                       "Subscriptions",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
                   ),
                 ],
@@ -99,36 +96,42 @@ class _FollowersScreenState extends State<FollowersScreen> {
                   children: [
                     Text(
                       "Lana",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 14),
                     ),
                     15.widthBox,
-                    index == 0
+                    controller.index == 0
                         ? Text(
                             "Follow",
-                            style: TextStyle(color: Colors.blue),
+                            style: TextStyle(color: Colors.blue, fontSize: 14),
                           )
                         : Text(""),
                   ],
                 ),
                 subtitle: Text(
-                  "Hai, whats’up bro. hayu atuh hangout dei jang Sabrina",
+                  "Hai, whats up bro. hayu atuh hangout dei jang Sabrina",
                   style: TextStyle(color: Colors.white, fontSize: 10),
                 ),
-                trailing: index == 0
+                trailing: controller.index == 0
                     ? ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Color.fromRGBO(255, 255, 255, 0.15),
+                        ),
                         child: Text("Remove"),
                         onPressed: () {},
                       )
-                    : (index == 1)
+                    : (controller.index == 1)
                         ? ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color.fromRGBO(255, 255, 255, 0.15),
+                            ),
                             child: Text("Following"),
                             onPressed: () {},
                           )
                         : ElevatedButton(
                             onPressed: () {}, child: Text("Subscribe"))),
             Divider(color: Colors.grey[350], height: 2),
-          ]),
-        ),
+          ]);
+        }),
       ),
     );
   }

@@ -22,4 +22,10 @@ class MainController extends GetxController {
     isAllMessage = isAllMessage1;
     refresh();
   }
+
+  var index = 0;
+  followers(index1) {
+    index = index1;
+    refresh();
+  }
 }
