@@ -20,6 +20,7 @@ class Onboarding1 extends StatelessWidget {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/Onboarding-1.png"),
+                    //  AssetImage("assets/Group 514155.png"),
                     fit: BoxFit.cover)),
             child: Scaffold(
               backgroundColor: Colors.transparent,

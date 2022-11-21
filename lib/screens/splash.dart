@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ChatScreen(),
+            builder: (context) => Onboarding1(),
           ));
     });
     return Scaffold(

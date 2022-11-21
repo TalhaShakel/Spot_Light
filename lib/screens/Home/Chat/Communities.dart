@@ -152,7 +152,7 @@ class CommunitiesScreen extends StatelessWidget {
   CommunityButton(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Get.to(CreateCommunity());
+        Get.to(() => CreateCommunity());
       },
       child: Container(
           width: Get.width,
