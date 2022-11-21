@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:spot_light/screens/Home/MainHomeScreens.dart';
 import 'package:spot_light/screens/Home/Onboarding/Onboarding1.dart';
 import 'package:spot_light/screens/Profile/Comments/Comments.dart';
 import 'package:spot_light/screens/Profile/EditProfile.dart';
@@ -18,7 +19,7 @@ class SplashScreen extends StatelessWidget {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Onboarding1(),
+            builder: (context) => ChatScreen(),
           ));
     });
     return Scaffold(

@@ -95,7 +95,9 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.find<MainController>();
+    var controller = Get.put(MainController());
+
+    // var controller = Get.find<MainController>();
 
     return Scaffold(
         backgroundColor: backgroundcolor,
@@ -157,7 +159,7 @@ class ChatScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                50.sp.heightBox,
+                11.sp.heightBox,
                 GetBuilder<MainController>(builder: (controller) {
                   return Column(
                     children: [
