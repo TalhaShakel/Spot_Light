@@ -15,12 +15,11 @@ class CreatePost extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundcolor,
       appBar: AppBar(
-        title: Text(
-          "Create Post",
-          style: TextStyle(color: Colors.white),
-        ),
+        backgroundColor: Color.fromRGBO(255, 255, 255, 0.1),
         centerTitle: true,
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+        // leading: Image.asset("assets/img2.png"),
+        title: "Create Post".text.make(),
+        // actions: [Icon(Icons.search)],
       ),
       body: Container(
           child: Padding(
@@ -60,10 +59,11 @@ class CreatePost extends StatelessWidget {
               TextFormField(
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.grey[200],
+                  fillColor: Color.fromRGBO(38, 38, 38, 1),
                   //////////////////////////////////////////
 
                   hintText: "Headline",
+                  hintStyle: TextStyle(color: Colors.white),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -74,7 +74,7 @@ class CreatePost extends StatelessWidget {
               TextFormField(
                   maxLines: 6,
                   decoration: InputDecoration(
-                      fillColor: Vx.white,
+                      fillColor: Color.fromRGBO(38, 38, 38, 1),
                       border: OutlineInputBorder(
                         borderRadius:
                             BorderRadius.all(Radius.circular(11.0.sp)),

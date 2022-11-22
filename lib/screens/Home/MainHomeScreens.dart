@@ -6,11 +6,13 @@ import 'package:get/get.dart';
 import 'package:spot_light/Controllers/mainController.dart';
 import 'package:spot_light/screens/Home/Chat/ChatHomeScreen.dart';
 import 'package:spot_light/screens/Home/Chat/Communities.dart';
+import 'package:spot_light/screens/Home/Create_Post_Screen.dart';
 import 'package:spot_light/screens/Home/Explore.dart';
 import 'package:spot_light/screens/Home/HomeSreen.dart';
 import 'package:spot_light/utils/contraint.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import 'Live/live_streaming.dart';
 import 'Notification.dart';
 
 class MainhomeScreen extends StatelessWidget {
@@ -20,7 +22,7 @@ class MainhomeScreen extends StatelessWidget {
   List screenList = [
     HomeScreen(),
     NotificationScreen(),
-    Center(child: "Places".text.bold.color(Vx.white).size(52).make()),
+    CreatePost(),
     ChatScreen(),
     ExploreScreen()
   ];
@@ -57,6 +59,15 @@ class MainhomeScreen extends StatelessWidget {
             BottomNavigationBarItem(
               icon: GestureDetector(
                   onTap: () {
+                    // Get.bottomSheet(
+                    //     shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadiusDirectional.only(
+                    //         topEnd: Radius.circular(25),
+                    //         topStart: Radius.circular(25),
+                    //       ),
+                    //     ),
+                    //     isScrollControlled: true,
+                    //     bottomsheet_widget());
                     controller.increasefunc(2);
                   },
                   child: Image.asset("assets/Group 514035.png")),
