@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:spot_light/screens/Auth_Screens/login.dart';
 import 'package:spot_light/screens/Home/Chat/Communities.dart';
 import 'package:spot_light/screens/Home/Chat/CreateCommunity.dart';
+import 'package:spot_light/screens/Home/Create_Post_Screen.dart';
 import 'package:spot_light/screens/Home/Onboarding/Onboarding1.dart';
 import 'package:spot_light/screens/Profile/Profile.dart';
 import 'package:spot_light/screens/splash.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
               // is not restarted.
               primarySwatch: Colors.blue,
             ),
-            home: SplashScreen(),
+            home: CreatePost(),
           );
         });
   }
