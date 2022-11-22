@@ -19,8 +19,9 @@ class Onboarding1 extends StatelessWidget {
             width: Get.width,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/Onboarding-1.png"),
-                    //  AssetImage("assets/Group 514155.png"),
+                    image:
+                        // AssetImage("assets/Onboarding-1.png"),
+                        AssetImage("assets/Group 514155.png"),
                     fit: BoxFit.cover)),
             child: Scaffold(
               backgroundColor: Colors.transparent,
@@ -31,23 +32,20 @@ class Onboarding1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      "Find friends all over the world"
-                          .text
-                          .size(35)
-                          .bold
-                          .white
-                          .make(),
+                      "Welcome to Spotlight".text.size(35).bold.white.make(),
                       10.heightBox,
-                      "With app, it’s easy to find the right music for every moment"
+                      "With Spotlight, you can go live with your friends, share thoughts in global audio events and promote your services at a global as well as local level."
                           .text
                           .size(14)
                           .white
                           .make(),
                       50.heightBox,
-                      // GestureDetector(
-                      //     onTap: () {
-                      //     },
-                      //     child: Image.asset("assets/btn.png"))
+                      GestureDetector(
+                          onTap: () {
+                            Get.to(() => Onboarding2());
+                          },
+                          child: Image.asset("assets/btn.png")),
+                      50.heightBox,
                     ],
                   ),
                 ),
